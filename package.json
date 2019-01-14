@@ -1,0 +1,22 @@
+{
+  "name": "FixMe-API",
+  "version": "0.1.0",
+  "description": "API for FixMe App",
+  "main": "server.js",
+  "repository": "https://github.com/Ambada-Soft/FixMe-API",
+  "author": "Ambada-Soft",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "jest ."
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.3.0"
+  }
+}
