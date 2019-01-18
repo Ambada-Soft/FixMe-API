@@ -1,5 +1,5 @@
 {
-  "name": "FixMe-API",
+  "name": "fixme-api",
   "version": "0.1.0",
   "description": "API for FixMe App",
   "main": "server.js",
@@ -12,7 +12,11 @@
     "test": "jest ."
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "firebase": "^5.7.3",
+    "firebase-admin": "^6.5.0",
+    "validator": "^10.10.0"
   },
   "devDependencies": {
     "jest": "^23.6.0",
