@@ -18,3 +18,13 @@ Application is going to be up on port `5000`
 # Credentials
 
 on `generate_token/` should exist an `ServiceAccountKey.json` file with a Firebase configuration Keys (are not included on project, should get them from https://console.firebase.google.com/u/2/project/fixme-api-dev/overview clicking on `</>` icon)
+
+example of file
+`{
+  "apiKey": "asdf-IOSD783973-44456asdfs",
+  "authDomain": "fixme-api-dev.firebaseapp.com",
+  "databaseURL": "https://fixme-api-dev.firebaseio.com",
+  "projectId": "jeje-jaja-jiji",
+  "storageBucket": "lolo-lala-lele.appspot.com",
+  "messagingSenderId": "1234"
+}`
