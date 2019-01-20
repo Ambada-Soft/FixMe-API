@@ -8,3 +8,4 @@ yarn-debug.log*
 yarn-error.log*
 # Secrets
 generate_token/ServiceAccountKey.json
+generate_token/fixme-api-*-firebase-adminsdk*.json

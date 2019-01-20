@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "yarn server",
+    "server": "nodemon api/index.js",
     "test": "jest ."
   },
   "dependencies": {
