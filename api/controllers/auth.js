@@ -13,9 +13,9 @@ const test = (req, res) => {
 const signup = (req, res) => {
   const auth = new Auth();
   auth.signup(req.body).then(response => {
-    const { isValid, user, errors } = response;
+    const { isValid, tokens, errors } = response;
     if (isValid) {
-      return res.status(201).json({ user });
+      return res.status(201).json({ tokens });
     } else {
       return res.status(400).json({ errors });
     }
