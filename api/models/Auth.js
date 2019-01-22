@@ -52,9 +52,18 @@ module.exports = class Auth {
     return firebase
       .auth()
       .createUserWithEmailAndPassword(body.email, body.password)
-      .then(user => {
-        // Need to check this, user variable expose a lot of data.
-        return { isValid, user, status: 201 };
+      .then(response => {
+        const responseParsed = JSON.parse(JSON.stringify(response.user));
+
+        return {
+          isValid,
+          tokens: {
+            refreshToken: responseParsed.stsTokenManager.accessToken,
+            accessToken: responseParsed.stsTokenManager.refreshToken,
+            exp: responseParsed.stsTokenManager.expirationTime
+          },
+          status: 201
+        };
       })
       .catch(errors => {
         return { isValid: false, errors, status: 401 };
