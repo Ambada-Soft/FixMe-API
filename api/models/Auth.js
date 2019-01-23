@@ -9,7 +9,6 @@ module.exports = class Auth {
     if (!firebase.apps.length) {
       firebase.initializeApp(serviceAccount);
     }
-    this.errors = {};
   }
 
   signin(body) {
@@ -30,8 +29,8 @@ module.exports = class Auth {
         return {
           isValid,
           tokens: {
-            refreshToken: responseParsed.stsTokenManager.accessToken,
-            accessToken: responseParsed.stsTokenManager.refreshToken,
+            accessToken: responseParsed.stsTokenManager.accessToken,
+            refreshToken: responseParsed.stsTokenManager.refreshToken,
             exp: responseParsed.stsTokenManager.expirationTime
           },
           status: 200
@@ -58,8 +57,8 @@ module.exports = class Auth {
         return {
           isValid,
           tokens: {
-            refreshToken: responseParsed.stsTokenManager.accessToken,
-            accessToken: responseParsed.stsTokenManager.refreshToken,
+            accessToken: responseParsed.stsTokenManager.accessToken,
+            refreshToken: responseParsed.stsTokenManager.refreshToken,
             exp: responseParsed.stsTokenManager.expirationTime
           },
           status: 201
